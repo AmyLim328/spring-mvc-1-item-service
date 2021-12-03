@@ -10,8 +10,8 @@ import java.util.Map;
 @Repository
 public class ItemRepository {
 
-    private static final Map<Long, Item> store = new HashMap<>(); // static
-    private static long sequence = 0L; // static
+    private static final Map<Long, Item> store = new HashMap<>(); // static 사용
+    private static long sequence = 0L; // static 사용
     // 동시성 문제가 고려되어 있지 않음, 실무에서는 ConcurrentHashMap, AtomicLong 사용 고려
 
     public Item save(Item item) {
@@ -43,7 +43,7 @@ public class ItemRepository {
 
     public void clearStore() {
         store.clear();
-        // HashMap에 있는 데이터 다 날려버림
+        // HashMap에 있는 데이터 모두 날려버림
         // 테스트에서 사용하려고 만듦
     }
 
