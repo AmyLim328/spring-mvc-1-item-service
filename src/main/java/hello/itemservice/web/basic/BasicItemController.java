@@ -75,6 +75,7 @@ public class BasicItemController {
 
 //    @PostMapping("/add")
     public String addItemV4(Item item) { // 상품 등록 v4
+        // @ModelAttribute 생략 가능 // 하지만 이것까지 생략해야 하나? 고민됨
         itemRepository.save(item);
         return "basic/item";
     }
